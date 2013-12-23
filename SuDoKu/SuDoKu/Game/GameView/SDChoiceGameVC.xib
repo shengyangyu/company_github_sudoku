@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SDChoiceGameVC">
             <connections>
+                <outlet property="buttomImage" destination="PF1-Ch-Gnh" id="CDu-nQ-mmw"/>
                 <outlet property="mainView" destination="3fu-KW-hfS" id="M8J-RK-S75"/>
                 <outlet property="titleLabel" destination="up7-HN-RZg" id="opi-g2-RRX"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -168,7 +169,7 @@
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
                         <view tag="101" contentMode="scaleToFill" id="NIG-jd-wb4">
-                            <rect key="frame" x="0.0" y="123" width="270" height="79"/>
+                            <rect key="frame" x="0.0" y="121" width="270" height="79"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SKV-7e-pEp">
@@ -248,7 +249,7 @@
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
                         <view tag="101" contentMode="scaleToFill" id="uul-Uq-fT4">
-                            <rect key="frame" x="0.0" y="212" width="270" height="79"/>
+                            <rect key="frame" x="0.0" y="208" width="270" height="79"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ooi-GG-YEC">
@@ -328,7 +329,7 @@
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
                         <view tag="101" contentMode="scaleToFill" id="60d-43-UiM">
-                            <rect key="frame" x="0.0" y="301" width="270" height="79"/>
+                            <rect key="frame" x="0.0" y="296" width="270" height="79"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c2H-mJ-chg">

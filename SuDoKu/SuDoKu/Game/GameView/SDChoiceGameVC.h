@@ -31,6 +31,7 @@
 
 - (void)setTitleLabelText:(NSString *)title;
 
+@property (retain, nonatomic) IBOutlet UIImageView *buttomImage;
 
 
 @end

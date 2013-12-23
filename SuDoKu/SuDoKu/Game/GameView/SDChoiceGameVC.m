@@ -45,6 +45,8 @@
 {
     [super viewDidLoad];
     [self changeViewButtonSytle];
+    float originy=([[UIDevice currentDevice].systemVersion floatValue]>=7.0)?0:20;
+    self.buttomImage.frame = CGRectMake(self.buttomImage.frame.origin.x, MAINSCREEN_HEIGHT - 50 - originy, self.buttomImage.frame.size.width, self.buttomImage.frame.size.height);
 
 }
 - (void)changeViewButtonSytle
@@ -84,6 +86,7 @@
     [_numberBtnArray release];
     [_mainView release];
     [_titleLabel release];
+    [_buttomImage release];
     [super dealloc];
 }
 @end
