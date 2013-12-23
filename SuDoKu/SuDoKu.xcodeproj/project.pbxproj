@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060E41C8186872B7004FC888 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 060E41C3186872B7004FC888 /* JSONKit.m */; };
+		060E41CA186872B7004FC888 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 060E41C7186872B7004FC888 /* Reachability.m */; };
+		060E41CC18687675004FC888 /* libMobiSageSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 060E41CB18687675004FC888 /* libMobiSageSDK.a */; };
+		060E41CE18687DEC004FC888 /* topimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 060E41CD18687DEC004FC888 /* topimage.jpg */; };
 		0646AC0D18560EBB00FC8F5F /* sudoku9.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0646AC0C18560EBB00FC8F5F /* sudoku9.txt */; };
 		065186EC185B60C10047A360 /* background_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 065186EB185B60C10047A360 /* background_image.jpg */; };
 		06F54D6A184E02DB00150700 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F54D69184E02DB00150700 /* ExternalAccessory.framework */; };
 		070944EE185834E3002B7C2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070944ED185834E3002B7C2A /* QuartzCore.framework */; };
 		07094557185847FE002B7C2A /* select_push.png in Resources */ = {isa = PBXBuildFile; fileRef = 07094556185847FE002B7C2A /* select_push.png */; };
-		070CA823186832D300E70375 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CA81E186832D300E70375 /* JSONKit.m */; };
-		070CA824186832D300E70375 /* libMobiSageSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA81F186832D300E70375 /* libMobiSageSDK.a */; };
-		070CA825186832D300E70375 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CA822186832D300E70375 /* Reachability.m */; };
 		070CA8271868334D00E70375 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA8261868334D00E70375 /* SystemConfiguration.framework */; };
 		070CA8291868335900E70375 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA8281868335900E70375 /* CoreLocation.framework */; };
 		070CA82B1868336200E70375 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA82A1868336200E70375 /* CoreTelephony.framework */; };
@@ -68,17 +69,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060E41C2186872B7004FC888 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		060E41C3186872B7004FC888 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		060E41C5186872B7004FC888 /* MobiSageSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobiSageSDK.h; sourceTree = "<group>"; };
+		060E41C6186872B7004FC888 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		060E41C7186872B7004FC888 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		060E41CB18687675004FC888 /* libMobiSageSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobiSageSDK.a; sourceTree = "<group>"; };
+		060E41CD18687DEC004FC888 /* topimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = topimage.jpg; sourceTree = "<group>"; };
 		0646AC0C18560EBB00FC8F5F /* sudoku9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sudoku9.txt; sourceTree = "<group>"; };
 		065186EB185B60C10047A360 /* background_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image.jpg; sourceTree = "<group>"; };
 		06F54D69184E02DB00150700 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		070944ED185834E3002B7C2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07094556185847FE002B7C2A /* select_push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_push.png; sourceTree = "<group>"; };
-		070CA81D186832D300E70375 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		070CA81E186832D300E70375 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		070CA81F186832D300E70375 /* libMobiSageSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobiSageSDK.a; sourceTree = "<group>"; };
-		070CA820186832D300E70375 /* MobiSageSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobiSageSDK.h; sourceTree = "<group>"; };
-		070CA821186832D300E70375 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		070CA822186832D300E70375 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		070CA8261868334D00E70375 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		070CA8281868335900E70375 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		070CA82A1868336200E70375 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -154,9 +156,9 @@
 				06F54D6A184E02DB00150700 /* ExternalAccessory.framework in Frameworks */,
 				079298361850746500DD2DB1 /* TesseractOCR.framework in Frameworks */,
 				07C39127184CA0580087293E /* CoreGraphics.framework in Frameworks */,
+				060E41CC18687675004FC888 /* libMobiSageSDK.a in Frameworks */,
 				07C39129184CA0580087293E /* UIKit.framework in Frameworks */,
 				07C39125184CA0580087293E /* Foundation.framework in Frameworks */,
-				070CA824186832D300E70375 /* libMobiSageSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,26 +175,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060E41C1186872B7004FC888 /* MobiSageSDK */ = {
+			isa = PBXGroup;
+			children = (
+				060E41CB18687675004FC888 /* libMobiSageSDK.a */,
+				060E41C2186872B7004FC888 /* JSONKit.h */,
+				060E41C3186872B7004FC888 /* JSONKit.m */,
+				060E41C5186872B7004FC888 /* MobiSageSDK.h */,
+				060E41C6186872B7004FC888 /* Reachability.h */,
+				060E41C7186872B7004FC888 /* Reachability.m */,
+			);
+			path = MobiSageSDK;
+			sourceTree = "<group>";
+		};
 		07094555185847F8002B7C2A /* ImageBlock */ = {
 			isa = PBXGroup;
 			children = (
+				060E41CD18687DEC004FC888 /* topimage.jpg */,
 				065186EB185B60C10047A360 /* background_image.jpg */,
 				07094556185847FE002B7C2A /* select_push.png */,
 			);
 			path = ImageBlock;
-			sourceTree = "<group>";
-		};
-		070CA81C186832D300E70375 /* MobiSageSDK */ = {
-			isa = PBXGroup;
-			children = (
-				070CA81D186832D300E70375 /* JSONKit.h */,
-				070CA81E186832D300E70375 /* JSONKit.m */,
-				070CA821186832D300E70375 /* Reachability.h */,
-				070CA822186832D300E70375 /* Reachability.m */,
-				070CA820186832D300E70375 /* MobiSageSDK.h */,
-				070CA81F186832D300E70375 /* libMobiSageSDK.a */,
-			);
-			path = MobiSageSDK;
 			sourceTree = "<group>";
 		};
 		074017511851CDF500DB09F6 /* Game */ = {
@@ -206,7 +209,7 @@
 		0740175E1851CE3B00DB09F6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				070CA81C186832D300E70375 /* MobiSageSDK */,
+				060E41C1186872B7004FC888 /* MobiSageSDK */,
 				07094555185847F8002B7C2A /* ImageBlock */,
 				074017691851CEEF00DB09F6 /* DataBlock */,
 				0740176A1851CEEF00DB09F6 /* MethodBlock */,
@@ -439,6 +442,7 @@
 				0785DCFD18596AAF0020F371 /* FontAwesome.ttf in Resources */,
 				07094557185847FE002B7C2A /* select_push.png in Resources */,
 				0646AC0D18560EBB00FC8F5F /* sudoku9.txt in Resources */,
+				060E41CE18687DEC004FC888 /* topimage.jpg in Resources */,
 				07C62F0A1856BEA8007CDC10 /* heb-seg.traineddata in Resources */,
 				077F09DF185566F8005BA49E /* SDGameVC6.xib in Resources */,
 				07C39157184CA07A0087293E /* SDViewController.xib in Resources */,
@@ -471,7 +475,7 @@
 				0731F542185999CD009A72AC /* SDCoreVC.m in Sources */,
 				0785DCFB18596A310020F371 /* UIButton+Bootstrap.m in Sources */,
 				0731F53C18599582009A72AC /* SDChoiceGameVC.m in Sources */,
-				070CA825186832D300E70375 /* Reachability.m in Sources */,
+				060E41CA186872B7004FC888 /* Reachability.m in Sources */,
 				077F09E318556721005BA49E /* SDGameVC9.m in Sources */,
 				07C39131184CA0580087293E /* main.m in Sources */,
 				07C39156184CA07A0087293E /* SDViewController.m in Sources */,
@@ -480,7 +484,7 @@
 				07C38B6A18643918007C7ABA /* SDDispatchTimer.m in Sources */,
 				0731F53218599518009A72AC /* SDShowGameVC.m in Sources */,
 				076E993D1863E500006C0CC7 /* SDAlertView.m in Sources */,
-				070CA823186832D300E70375 /* JSONKit.m in Sources */,
+				060E41C8186872B7004FC888 /* JSONKit.m in Sources */,
 				07C39135184CA0580087293E /* SDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,7 +617,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/amariyangge/Desktop/company_github_sudoku/SuDoKu/SuDoKu/Common/MobiSageSDK,
+					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -639,7 +643,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/amariyangge/Desktop/company_github_sudoku/SuDoKu/SuDoKu/Common/MobiSageSDK,
+					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";

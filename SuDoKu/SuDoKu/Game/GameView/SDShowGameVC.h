@@ -12,6 +12,7 @@
 @interface SDShowGameVC : UIViewController<MobiSageAdBannerDelegate>
 {
     MobiSageAdBanner * adBanner;
+    MobiSageAdBanner * bottomAdBanner;
 }
 
 @property (retain, nonatomic) IBOutlet UIView *contentView;

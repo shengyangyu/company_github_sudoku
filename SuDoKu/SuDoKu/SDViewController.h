@@ -13,6 +13,7 @@
 @interface SDViewController : UIViewController<MobiSageAdBannerDelegate>
 {
     MobiSageAdBanner * adBanner;
+    MobiSageAdBanner * bottomAdBanner;
 }
 
 @property (retain, nonatomic) IBOutlet UIButton *button6;

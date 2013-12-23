@@ -73,6 +73,14 @@
                                 <action selector="fightMethod:" destination="-1" eventType="touchUpInside" id="btG-GN-ml9"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topimage.jpg" id="gNW-Zh-Lpf">
+                            <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topimage.jpg" id="m2Z-i5-wad">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -85,5 +93,6 @@
     </objects>
     <resources>
         <image name="background_image.jpg" width="640" height="1136"/>
+        <image name="topimage.jpg" width="1282" height="201"/>
     </resources>
 </document>
