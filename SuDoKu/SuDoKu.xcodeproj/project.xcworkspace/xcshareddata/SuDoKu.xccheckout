@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8ED5892F-9EF9-4C2C-9EF8-B7B9E438A355</string>
+	<string>7A7BF4BF-7F99-4E90-91C0-070F03CB6ACF</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SuDoKu</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1010F408-1832-4219-A076-6689FC62128C</key>
-		<string>https://github.com/shengyangyu2/company_github_sudoku.git</string>
+		<key>9EEB779E-087B-4821-8C79-74CAC93B2EFC</key>
+		<string>https://github.com/shengyangyu/company_github_sudoku.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SuDoKu/SuDoKu.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1010F408-1832-4219-A076-6689FC62128C</key>
+		<key>9EEB779E-087B-4821-8C79-74CAC93B2EFC</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/shengyangyu2/company_github_sudoku.git</string>
+	<string>https://github.com/shengyangyu/company_github_sudoku.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1010F408-1832-4219-A076-6689FC62128C</string>
+	<string>9EEB779E-087B-4821-8C79-74CAC93B2EFC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1010F408-1832-4219-A076-6689FC62128C</string>
+			<string>9EEB779E-087B-4821-8C79-74CAC93B2EFC</string>
 			<key>IDESourceControlWCCName</key>
-			<string>shengyangyu2_clone</string>
+			<string>company_github_sudoku</string>
 		</dict>
 	</array>
 </dict>
