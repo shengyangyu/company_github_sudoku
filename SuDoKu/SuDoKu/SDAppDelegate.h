@@ -12,7 +12,11 @@
  *  @param strong    company mac
  *  @param nonatomic shengyang yu
  *
+<<<<<<< HEAD
  *  @return yes 22
+=======
+ *  @return yes 2 shengyangyu2
+>>>>>>> ce1f1c1d4e83486fd21e126130d1558bc9c5abc4
  */
 #import <UIKit/UIKit.h>
 
