@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MobiSageSDK.h"
 
-@interface SDShowGameVC : UIViewController
+@interface SDShowGameVC : UIViewController<MobiSageAdBannerDelegate>
+{
+    MobiSageAdBanner * adBanner;
+}
 
 @property (retain, nonatomic) IBOutlet UIView *contentView;
-
 @property (retain, nonatomic) IBOutlet UIButton *comebackBtn;
 @property (retain, nonatomic) IBOutlet UIButton *lastBtn;
 

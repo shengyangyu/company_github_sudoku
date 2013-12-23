@@ -70,6 +70,12 @@
     [self.comebackBtn setBackGroundAndTitleColorStyle];
     [self.comebackBtn addAwesomeIcon:FAIconChevronLeft beforeTitle:YES];
     
+    adBanner = [[MobiSageAdBanner alloc] initWithAdSize:Ad_320X50 withDelegate:self];
+    adBanner.frame = CGRectMake(0, 0, 320, 50);
+    //设置广告轮播动画效果
+    [adBanner setSwitchAnimeType:Random];
+    [self.view addSubview:adBanner];
+    [adBanner release];
     
     if (self.currentModel == GAME_MODE_6)
     {
@@ -176,6 +182,55 @@
     }
     
 }
+
+#pragma mark - MobiSageAdViewDelegate 委托
+#pragma mark
+- (UIViewController *)viewControllerToPresent
+{
+    return self;
+}
+/**
+ *  横幅广告被点击
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerClick:(MobiSageAdBanner*)adBanner
+{
+    NSLog(@"横幅广告被点击");
+}
+
+/**
+ *  adBanner请求成功并展示广告
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerSuccessToShowAd:(MobiSageAdBanner*)adBanner
+{
+    NSLog(@"横幅广告请求成功并展示广告");
+}
+/**
+ *  adBanner请求失败
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerFaildToShowAd:(MobiSageAdBanner*)adBanner
+{
+    NSLog(@"横幅广告请求失败");
+}
+/**
+ *  adBanner被点击后弹出LandingSit
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerPopADWindow:(MobiSageAdBanner*)adBanner
+{
+    NSLog(@"被点击后弹出LandingSit");
+}
+/**
+ *  adBanner弹出的LandingSit被关闭
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerHideADWindow:(MobiSageAdBanner*)adBanner
+{
+    NSLog(@"弹出的LandingSit被关闭");
+}
+
 
 - (void)dealloc {
     

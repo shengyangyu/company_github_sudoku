@@ -8,9 +8,12 @@
 // shengyangyu
 
 #import <UIKit/UIKit.h>
+#import "MobiSageSDK.h"
 
-@interface SDViewController : UIViewController
-
+@interface SDViewController : UIViewController<MobiSageAdBannerDelegate>
+{
+    MobiSageAdBanner * adBanner;
+}
 
 @property (retain, nonatomic) IBOutlet UIButton *button6;
 

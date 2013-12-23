@@ -19,8 +19,12 @@
  ce1f1c1d4e83486fd21e126130d1558bc9c5abc4
  */
 #import <UIKit/UIKit.h>
+#import "MobiSageSDK.h"
 
-@interface SDAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SDAppDelegate : UIResponder <UIApplicationDelegate,MobiSageAdSplashDelegate>
+{
+    MobiSageAdSplash * mobiSageAdSplash;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundUpdateTask;

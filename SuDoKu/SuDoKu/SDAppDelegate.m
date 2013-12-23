@@ -16,8 +16,15 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     SDViewController *vc = [[[SDViewController alloc] initWithNibName:@"SDViewController" bundle:nil] autorelease];
     self.window.rootViewController = vc;
-    [self.window makeKeyAndVisible];
- 
+//    [self.window makeKeyAndVisible];
+    /**
+     *  广告
+     */
+    mobiSageAdSplash = [[MobiSageAdSplash alloc] initWithOrientation:MobiSage_Orientation_Portrait
+                                                          background:[UIColor whiteColor]
+                                                        withDelegate:self];
+    [mobiSageAdSplash startSplash];
+    
     return YES;
 }
 
@@ -65,6 +72,41 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+/**
+ *  广告
+ */
+
+/**
+ *  开屏广告展示成功
+ *  @param adSplash
+ */
+- (void)mobiSageAdSplashSuccessToShow:(MobiSageAdSplash*)adSplash
+{
+    NSLog(@"开屏广告展示成功");
+}
+
+/**
+ *  开屏广告展示失败
+ *  @param adSplash
+ */
+- (void)mobiSageAdSplashFaildToRequest:(MobiSageAdSplash*)adSplash
+{
+    NSLog(@"开屏广告展示失败");
+    [mobiSageAdSplash release];
+    [self.window makeKeyAndVisible];
+}
+
+/**
+ *  开屏广告被关闭
+ *  @param adSplash
+ */
+- (void)mobiSageAdSplashClose:(MobiSageAdSplash*)adSplash
+{
+    
+    NSLog(@"开屏广告关闭");
+    [mobiSageAdSplash release];
+    [self.window makeKeyAndVisible];
 }
 
 @end
