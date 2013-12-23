@@ -76,7 +76,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" id="3fu-KW-hfS">
-                    <rect key="frame" x="50" y="26" width="270" height="376"/>
+                    <rect key="frame" x="50" y="0.0" width="270" height="376"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 阶" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="up7-HN-RZg">

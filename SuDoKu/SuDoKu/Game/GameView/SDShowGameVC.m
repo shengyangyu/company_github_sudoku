@@ -88,12 +88,25 @@
     {
         SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex +1)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
         [alert showView];
+        alert.leftBlock = ^(){
+            [self comeBackMethod:nil];
+        };
+        alert.rightBlock = ^(){
+            self.currentIndex ++;
+            if (self.currentModel == GAME_MODE_6)
+            {
+                [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku6"]];
+            }
+            else
+            {
+                [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku9"]];
+            }
+        };
         [alert release];
-        
     }else{
-        /*
-        NSLog(@"startCoreMethod:failed");
-         */
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"请仔细检查" withContent:@"您的答案有误!" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
+        [alert showView];
+        [alert release];
     }
 }
 /**
