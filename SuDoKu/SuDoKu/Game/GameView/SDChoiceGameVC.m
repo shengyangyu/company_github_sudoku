@@ -45,8 +45,21 @@
 {
     [super viewDidLoad];
     [self changeViewButtonSytle];
-    float originy=([[UIDevice currentDevice].systemVersion floatValue]>=7.0)?0:20;
-    self.buttomImage.frame = CGRectMake(self.buttomImage.frame.origin.x, MAINSCREEN_HEIGHT - 50 - originy, self.buttomImage.frame.size.width, self.buttomImage.frame.size.height);
+    self.buttomImage.frame = CGRectMake(self.buttomImage.frame.origin.x, MAINSCREEN_HEIGHT - 50 - STATUS_HEIGHT, self.buttomImage.frame.size.width, self.buttomImage.frame.size.height);
+    
+    adBanner = [[MobiSageAdBanner alloc] initWithAdSize:Ad_320X50 withDelegate:self];
+    adBanner.frame = CGRectMake(0, 0, 320, 50);
+    //设置广告轮播动画效果
+    [adBanner setSwitchAnimeType:Random];
+    [self.view addSubview:adBanner];
+    [adBanner release];
+    
+    bottomAdBanner = [[MobiSageAdBanner alloc] initWithAdSize:Ad_320X50 withDelegate:self];
+    bottomAdBanner.frame = CGRectMake(0, MAINSCREEN_HEIGHT - 50 - STATUS_HEIGHT, 320, 50);
+    //设置广告轮播动画效果
+    [bottomAdBanner setSwitchAnimeType:Random];
+    [self.view addSubview:bottomAdBanner];
+    [bottomAdBanner release];
 
 }
 - (void)changeViewButtonSytle
@@ -74,6 +87,53 @@
 {
     self.titleLabel.text = title;
     [self.view drawRect:self.view.frame];
+}
+#pragma mark - MobiSageAdViewDelegate 委托
+#pragma mark
+- (UIViewController *)viewControllerToPresent
+{
+    return self;
+}
+/**
+ *  横幅广告被点击
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerClick:(MobiSageAdBanner*)adBanner
+{
+    //    NSLog(@"横幅广告被点击");
+}
+
+/**
+ *  adBanner请求成功并展示广告
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerSuccessToShowAd:(MobiSageAdBanner*)adBanner
+{
+    //    NSLog(@"横幅广告请求成功并展示广告");
+}
+/**
+ *  adBanner请求失败
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerFaildToShowAd:(MobiSageAdBanner*)adBanner
+{
+    //    NSLog(@"横幅广告请求失败");
+}
+/**
+ *  adBanner被点击后弹出LandingSit
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerPopADWindow:(MobiSageAdBanner*)adBanner
+{
+    //    NSLog(@"被点击后弹出LandingSit");
+}
+/**
+ *  adBanner弹出的LandingSit被关闭
+ *  @param adBanner
+ */
+- (void)mobiSageAdBannerHideADWindow:(MobiSageAdBanner*)adBanner
+{
+    //    NSLog(@"弹出的LandingSit被关闭");
 }
 
 - (void)didReceiveMemoryWarning

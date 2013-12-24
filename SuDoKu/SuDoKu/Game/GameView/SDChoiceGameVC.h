@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MobiSageSDK.h"
 
 @protocol SDChoiceGameVCDelegate <NSObject>
 
@@ -16,7 +17,12 @@
 
 @end
 
-@interface SDChoiceGameVC : UIViewController
+@interface SDChoiceGameVC : UIViewController<MobiSageAdBannerDelegate>
+{
+    MobiSageAdBanner * adBanner;
+    MobiSageAdBanner * bottomAdBanner;
+}
+
 
 @property (nonatomic,assign)id<SDChoiceGameVCDelegate>choiceDelegate;
 

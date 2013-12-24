@@ -44,7 +44,7 @@
     [adBanner release];
     
     bottomAdBanner = [[MobiSageAdBanner alloc] initWithAdSize:Ad_320X50 withDelegate:self];
-    bottomAdBanner.frame = CGRectMake(0, MAINSCREEN_HEIGHT - 50, 320, 50);
+    bottomAdBanner.frame = CGRectMake(0, MAINSCREEN_HEIGHT - 50 - STATUS_HEIGHT, 320, 50);
     //设置广告轮播动画效果
     [bottomAdBanner setSwitchAnimeType:Random];
     [self.view addSubview:bottomAdBanner];
