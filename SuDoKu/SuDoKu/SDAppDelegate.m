@@ -8,6 +8,7 @@
 
 #import "SDAppDelegate.h"
 #import "SDViewController.h"
+#import "BPush.h"
 
 @implementation SDAppDelegate
 
@@ -20,10 +21,15 @@
     /**
      *  广告
      */
-    mobiSageAdSplash = [[MobiSageAdSplash alloc] initWithOrientation:MobiSage_Orientation_Portrait
-                                                          background:[UIColor whiteColor]
-                                                        withDelegate:self];
+    mobiSageAdSplash = [[MobiSageAdSplash alloc] initWithOrientation:MobiSage_Orientation_Portrait background:[UIColor whiteColor]withDelegate:self];
     [mobiSageAdSplash startSplash];
+    /**
+     *  通知
+     */
+    [BPush setupChannel:launchOptions];
+    [BPush setDelegate:self];
+    [application setApplicationIconBadgeNumber:0];
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
     
     return YES;
 }
@@ -83,7 +89,7 @@
  */
 - (void)mobiSageAdSplashSuccessToShow:(MobiSageAdSplash*)adSplash
 {
-    NSLog(@"开屏广告展示成功");
+    //NSLog(@"开屏广告展示成功");
 }
 
 /**
@@ -92,7 +98,7 @@
  */
 - (void)mobiSageAdSplashFaildToRequest:(MobiSageAdSplash*)adSplash
 {
-    NSLog(@"开屏广告展示失败");
+    //NSLog(@"开屏广告展示失败");
     [mobiSageAdSplash release];
     [self.window makeKeyAndVisible];
 }
@@ -104,9 +110,38 @@
 - (void)mobiSageAdSplashClose:(MobiSageAdSplash*)adSplash
 {
     
-    NSLog(@"开屏广告关闭");
+    //NSLog(@"开屏广告关闭");
     [mobiSageAdSplash release];
     [self.window makeKeyAndVisible];
 }
 
+/**
+ *  通知
+ */
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSString *alert = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    if (application.applicationState == UIApplicationStateActive)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"指尖数独通知"message:[NSString stringWithFormat:@"%@", alert]delegate:self cancelButtonTitle:@"知道了"otherButtonTitles:nil];
+        [alertView show];
+    }
+    [application setApplicationIconBadgeNumber:0];
+    [BPush handleNotification:userInfo];
+}
+/**
+ *   绑定 解除绑定 等等代理
+ *
+ *  @param method 方法名
+ *  @param data   返回参数
+ */
+- (void) onMethod:(NSString*)method response:(NSDictionary*)data
+{
+    
+}
+//请求通知后调用
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    [BPush registerDeviceToken: deviceToken];
+}
 @end

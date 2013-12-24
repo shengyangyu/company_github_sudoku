@@ -13,6 +13,14 @@
 		060E41CE18687DEC004FC888 /* topimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 060E41CD18687DEC004FC888 /* topimage.jpg */; };
 		0646AC0D18560EBB00FC8F5F /* sudoku9.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0646AC0C18560EBB00FC8F5F /* sudoku9.txt */; };
 		065186EC185B60C10047A360 /* background_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 065186EB185B60C10047A360 /* background_image.jpg */; };
+		068955ED1869C4D7006CF114 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 068955E21869C4D7006CF114 /* libBPush.a */; };
+		068955EE1869C4D7006CF114 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 068955E51869C4D7006CF114 /* Base64.m */; };
+		068955EF1869C4D7006CF114 /* GzipCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 068955E81869C4D7006CF114 /* GzipCompressor.m */; };
+		068955F01869C4D7006CF114 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 068955EA1869C4D7006CF114 /* OpenUDID.m */; };
+		068955F31869C54D006CF114 /* BPushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 068955F21869C54D006CF114 /* BPushConfig.plist */; };
+		068955F51869C555006CF114 /* cat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 068955F41869C555006CF114 /* cat.caf */; };
+		068955F71869CCB8006CF114 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068955F61869CCB8006CF114 /* CFNetwork.framework */; };
+		068955F91869CCD8006CF114 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 068955F81869CCD8006CF114 /* libz.dylib */; };
 		06F54D6A184E02DB00150700 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F54D69184E02DB00150700 /* ExternalAccessory.framework */; };
 		070944EE185834E3002B7C2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070944ED185834E3002B7C2A /* QuartzCore.framework */; };
 		07094557185847FE002B7C2A /* select_push.png in Resources */ = {isa = PBXBuildFile; fileRef = 07094556185847FE002B7C2A /* select_push.png */; };
@@ -78,6 +86,19 @@
 		060E41CD18687DEC004FC888 /* topimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = topimage.jpg; sourceTree = "<group>"; };
 		0646AC0C18560EBB00FC8F5F /* sudoku9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sudoku9.txt; sourceTree = "<group>"; };
 		065186EB185B60C10047A360 /* background_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image.jpg; sourceTree = "<group>"; };
+		068955E11869C4D7006CF114 /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
+		068955E21869C4D7006CF114 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		068955E41869C4D7006CF114 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		068955E51869C4D7006CF114 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		068955E61869C4D7006CF114 /* Base64Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Defines.h; sourceTree = "<group>"; };
+		068955E71869C4D7006CF114 /* GzipCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzipCompressor.h; sourceTree = "<group>"; };
+		068955E81869C4D7006CF114 /* GzipCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzipCompressor.m; sourceTree = "<group>"; };
+		068955E91869C4D7006CF114 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		068955EA1869C4D7006CF114 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		068955F21869C54D006CF114 /* BPushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BPushConfig.plist; sourceTree = "<group>"; };
+		068955F41869C555006CF114 /* cat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.caf; sourceTree = "<group>"; };
+		068955F61869CCB8006CF114 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		068955F81869CCD8006CF114 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		06F54D69184E02DB00150700 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		070944ED185834E3002B7C2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07094556185847FE002B7C2A /* select_push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_push.png; sourceTree = "<group>"; };
@@ -145,12 +166,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068955F91869CCD8006CF114 /* libz.dylib in Frameworks */,
+				070CA8271868334D00E70375 /* SystemConfiguration.framework in Frameworks */,
+				068955F71869CCB8006CF114 /* CFNetwork.framework in Frameworks */,
+				070CA82B1868336200E70375 /* CoreTelephony.framework in Frameworks */,
 				070CA8311868337800E70375 /* StoreKit.framework in Frameworks */,
+				068955ED1869C4D7006CF114 /* libBPush.a in Frameworks */,
 				070CA82F1868337100E70375 /* AdSupport.framework in Frameworks */,
 				070CA82D1868336900E70375 /* MessageUI.framework in Frameworks */,
-				070CA82B1868336200E70375 /* CoreTelephony.framework in Frameworks */,
 				070CA8291868335900E70375 /* CoreLocation.framework in Frameworks */,
-				070CA8271868334D00E70375 /* SystemConfiguration.framework in Frameworks */,
 				070944EE185834E3002B7C2A /* QuartzCore.framework in Frameworks */,
 				079298261850700300DD2DB1 /* libstdc++.6.0.9.dylib in Frameworks */,
 				06F54D6A184E02DB00150700 /* ExternalAccessory.framework in Frameworks */,
@@ -188,6 +212,30 @@
 			path = MobiSageSDK;
 			sourceTree = "<group>";
 		};
+		068955E01869C4D7006CF114 /* BaiduPushSDK */ = {
+			isa = PBXGroup;
+			children = (
+				068955E11869C4D7006CF114 /* BPush.h */,
+				068955E21869C4D7006CF114 /* libBPush.a */,
+				068955E31869C4D7006CF114 /* opensource */,
+			);
+			path = BaiduPushSDK;
+			sourceTree = "<group>";
+		};
+		068955E31869C4D7006CF114 /* opensource */ = {
+			isa = PBXGroup;
+			children = (
+				068955E41869C4D7006CF114 /* Base64.h */,
+				068955E51869C4D7006CF114 /* Base64.m */,
+				068955E61869C4D7006CF114 /* Base64Defines.h */,
+				068955E71869C4D7006CF114 /* GzipCompressor.h */,
+				068955E81869C4D7006CF114 /* GzipCompressor.m */,
+				068955E91869C4D7006CF114 /* OpenUDID.h */,
+				068955EA1869C4D7006CF114 /* OpenUDID.m */,
+			);
+			path = opensource;
+			sourceTree = "<group>";
+		};
 		07094555185847F8002B7C2A /* ImageBlock */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +257,7 @@
 		0740175E1851CE3B00DB09F6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				068955E01869C4D7006CF114 /* BaiduPushSDK */,
 				060E41C1186872B7004FC888 /* MobiSageSDK */,
 				07094555185847F8002B7C2A /* ImageBlock */,
 				074017691851CEEF00DB09F6 /* DataBlock */,
@@ -299,6 +348,8 @@
 		07C39123184CA0580087293E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				068955F81869CCD8006CF114 /* libz.dylib */,
+				068955F61869CCB8006CF114 /* CFNetwork.framework */,
 				070CA8301868337800E70375 /* StoreKit.framework */,
 				070CA82E1868337100E70375 /* AdSupport.framework */,
 				070CA82C1868336900E70375 /* MessageUI.framework */,
@@ -336,6 +387,8 @@
 		07C3912B184CA0580087293E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				068955F41869C555006CF114 /* cat.caf */,
+				068955F21869C54D006CF114 /* BPushConfig.plist */,
 				07C3912C184CA0580087293E /* SuDoKu-Info.plist */,
 				07C3912D184CA0580087293E /* InfoPlist.strings */,
 				07C39130184CA0580087293E /* main.m */,
@@ -441,8 +494,10 @@
 				074017741851CFD200DB09F6 /* sudoku6.txt in Resources */,
 				0785DCFD18596AAF0020F371 /* FontAwesome.ttf in Resources */,
 				07094557185847FE002B7C2A /* select_push.png in Resources */,
+				068955F31869C54D006CF114 /* BPushConfig.plist in Resources */,
 				0646AC0D18560EBB00FC8F5F /* sudoku9.txt in Resources */,
 				060E41CE18687DEC004FC888 /* topimage.jpg in Resources */,
+				068955F51869C555006CF114 /* cat.caf in Resources */,
 				07C62F0A1856BEA8007CDC10 /* heb-seg.traineddata in Resources */,
 				077F09DF185566F8005BA49E /* SDGameVC6.xib in Resources */,
 				07C39157184CA07A0087293E /* SDViewController.xib in Resources */,
@@ -474,11 +529,14 @@
 				0785DCF8185968610020F371 /* NSString+FontAwesome.m in Sources */,
 				0731F542185999CD009A72AC /* SDCoreVC.m in Sources */,
 				0785DCFB18596A310020F371 /* UIButton+Bootstrap.m in Sources */,
+				068955F01869C4D7006CF114 /* OpenUDID.m in Sources */,
 				0731F53C18599582009A72AC /* SDChoiceGameVC.m in Sources */,
 				060E41CA186872B7004FC888 /* Reachability.m in Sources */,
 				077F09E318556721005BA49E /* SDGameVC9.m in Sources */,
 				07C39131184CA0580087293E /* main.m in Sources */,
+				068955EF1869C4D7006CF114 /* GzipCompressor.m in Sources */,
 				07C39156184CA07A0087293E /* SDViewController.m in Sources */,
+				068955EE1869C4D7006CF114 /* Base64.m in Sources */,
 				074017771851D00600DB09F6 /* SDCommonMethod.m in Sources */,
 				077F09DE185566F8005BA49E /* SDGameVC6.m in Sources */,
 				07C38B6A18643918007C7ABA /* SDDispatchTimer.m in Sources */,
@@ -544,7 +602,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hui tian (AD2W7FP84T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hui tian (AD2W7FP84T)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -583,7 +642,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hui tian (AD2W7FP84T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hui tian (AD2W7FP84T)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -607,6 +667,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: hui tian (AD2W7FP84T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Products",
 					"$(inherited)",
@@ -618,6 +679,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
+					"$(SRCROOT)/SuDoKu/Common/BaiduPushSDK",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,6 +695,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: hui tian (AD2W7FP84T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Products",
 					"$(inherited)",
@@ -644,6 +707,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
+					"$(SRCROOT)/SuDoKu/Common/BaiduPushSDK",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";

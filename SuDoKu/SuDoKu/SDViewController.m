@@ -11,7 +11,7 @@
 #import "SDShowGameVC.h"
 #import "UIButton+Bootstrap.h"
 #import "SDCommonMethod.h"
-
+#import "BPush.h"
 
 @interface SDViewController ()<SDChoiceGameVCDelegate>
 
@@ -49,7 +49,8 @@
     [bottomAdBanner setSwitchAnimeType:Random];
     [self.view addSubview:bottomAdBanner];
     [bottomAdBanner release];
-    
+    //通知绑定
+    [BPush bindChannel];
 }
 - (void)setChoiceVCLabelString:(NSString *)tltle
 {
