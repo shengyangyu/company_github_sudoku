@@ -105,7 +105,7 @@
 {
     if ([[self currentAnswer] isEqualToString:@"less"])
     {
-        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"亲" withContent:@"您的答题不完整!" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"亲" withContent:@"您的答题不完整!" withLeftButtonTitle:nil withRightButtonTitle:@"知道了"];
         [alert showView];
         [alert release];
         
@@ -116,7 +116,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:self.currentIndex] forKey:[NSString stringWithFormat:@"openInt%dmodel",self.currentModel]];
         if (self.currentIndex == 36) {
             [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:0] forKey:@"openInt9model"];
-            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:@"6阶全关,9阶开启" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
+            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:@"6阶全关,9阶开启" withLeftButtonTitle:nil withRightButtonTitle:@"知道了"];
             [alert showView];
             [alert release];
         }
@@ -140,7 +140,7 @@
             [alert release];
         }
     }else{
-        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"请仔细检查" withContent:@"您的答案有误!" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"请仔细检查" withContent:@"您的答案有误!" withLeftButtonTitle:nil withRightButtonTitle:@"知道了"];
         [alert showView];
         [alert release];
     }

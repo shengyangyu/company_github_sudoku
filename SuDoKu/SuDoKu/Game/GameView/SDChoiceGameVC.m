@@ -81,7 +81,7 @@
     NSInteger currentIndex = [[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"openInt%dmodel",self.currentModel]] integerValue];
     if (sender.tag - BUTTON_TAG_BASE > currentIndex)
     {
-        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"不要急，慢慢来!" withContent:@"先完成前面的!" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"不要急，慢慢来!" withContent:@"先完成前面的!" withLeftButtonTitle:nil withRightButtonTitle:@"知道了"];
         [alert showView];
     }
     else if (sender.tag - BUTTON_TAG_BASE < currentIndex)
