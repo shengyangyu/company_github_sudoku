@@ -31,6 +31,8 @@
     [application setApplicationIconBadgeNumber:0];
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
     
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:0] forKey:@"openInt6model"];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:-1] forKey:@"openInt9model"];
     return YES;
 }
 
@@ -45,7 +47,7 @@
     //为了延长程序进入后台 文件操作时间
     [self beginBackgroundTask];
     // 在这里加上你需要长久运行的代码
-    
+    NSLog(@"applicationDidEnterBackground");
     
     [self endBackgroundTask];
     
@@ -126,7 +128,7 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"指尖数独通知"message:[NSString stringWithFormat:@"%@", alert]delegate:self cancelButtonTitle:@"知道了"otherButtonTitles:nil];
         [alertView show];
     }
-    [application setApplicationIconBadgeNumber:0];
+    [application setApplicationIconBadgeNumber:1];
     [BPush handleNotification:userInfo];
 }
 /**

@@ -10,6 +10,7 @@
 #import "SDCommonMethod.h"
 #import "UIButton+Bootstrap.h"
 #import "SDShowGameVC.h"
+#import "SDAlertView.h"
 
 @interface SDChoiceGameVC ()
 
@@ -77,10 +78,36 @@
 #pragma mark - 按钮方法
 - (void)buttonMethod:(UIButton *)sender
 {
-    SDShowGameVC *vc = [[[SDShowGameVC alloc] initWithNibName:@"SDShowGameVC" bundle:nil withGameModel:self.currentModel withGameIndex:sender.tag - BUTTON_TAG_BASE] autorelease];
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
+    NSInteger currentIndex = [[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"openInt%dmodel",self.currentModel]] integerValue];
+    if (sender.tag - BUTTON_TAG_BASE > currentIndex)
+    {
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"不要急，慢慢来!" withContent:@"先完成前面的!" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
+        [alert showView];
+    }
+    else if (sender.tag - BUTTON_TAG_BASE < currentIndex)
+    {
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"您将要清除当前存档!" withContent:@"开始其他关卡!" withLeftButtonTitle:@"返回" withRightButtonTitle:@"确定"];
+        [alert showView];
+        alert.rightBlock = ^(){
+            SDShowGameVC *vc = [[[SDShowGameVC alloc] initWithNibName:@"SDShowGameVC" bundle:nil withGameModel:self.currentModel withGameIndex:sender.tag - BUTTON_TAG_BASE withIsRead:NO] autorelease];
+            [self presentViewController:vc animated:YES completion:^{
+                
+            }];
+        };
+        [alert release];
+    }
+    else
+    {
+        BOOL read = NO;
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"answer"] != nil) {
+            NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"answer"]);
+            read = YES;
+        }
+        SDShowGameVC *vc = [[[SDShowGameVC alloc] initWithNibName:@"SDShowGameVC" bundle:nil withGameModel:self.currentModel withGameIndex:sender.tag - BUTTON_TAG_BASE withIsRead:read] autorelease];
+        [self presentViewController:vc animated:YES completion:^{
+            
+        }];
+    }
 }
 
 - (void)setTitleLabelText:(NSString *)title

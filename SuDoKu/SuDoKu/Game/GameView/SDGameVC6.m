@@ -7,7 +7,7 @@
 //
 
 #import "SDGameVC6.h"
-
+#import "SDCommonMethod.h"
 @interface SDGameVC6 ()
 
 
@@ -41,6 +41,8 @@
 
 - (void)setView6NumberValue:(NSString *)data
 {
+    NSInteger currentIndex = [[[NSUserDefaults standardUserDefaults]objectForKey:@"openInt6dmodel"] integerValue];
+    NSString *quesStr = [SDCommonMethod getQuestionForIndex:currentIndex withPath:@"sudoku6"];
     for (int i = 0; i < [data length]; i ++)
     {
         NSString *num = [data substringWithRange:NSMakeRange(i, 1)];
@@ -52,8 +54,12 @@
             button.enabled = YES;
         }else{
             [button setTitle:num forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-            button.enabled = NO;
+            if ([[quesStr substringWithRange:NSMakeRange(i, 1)]isEqualToString:@"0"]) {
+                button.enabled = YES;
+            }else{
+                [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+                button.enabled = NO;
+            }
         }
     }
 }

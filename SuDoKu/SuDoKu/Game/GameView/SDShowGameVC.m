@@ -34,7 +34,7 @@
 
 @implementation SDShowGameVC
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withGameModel:(NSInteger)gameModel withGameIndex:(NSInteger)gameIndex
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withGameModel:(NSInteger)gameModel withGameIndex:(NSInteger)gameIndex withIsRead:(BOOL)isRead
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -44,7 +44,11 @@
             self.currentModel = GAME_MODE_6;
             self.gameVC6 = [[[SDGameVC6 alloc] initWithNibName:@"SDGameVC6" bundle:nil] autorelease];
             self.gameVC6.gameDelegate = self;
-            [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:gameIndex withPath:@"sudoku6"]];
+            if (isRead == YES) {
+                [self.gameVC6 setView6NumberValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"answer"]];
+            }else{
+                [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:gameIndex withPath:@"sudoku6"]];
+            }
             [self addChildViewController:self.gameVC6];
         }
         else
@@ -52,12 +56,17 @@
             self.currentModel = GAME_MODE_9;
             self.gameVC9 = [[[SDGameVC9 alloc] initWithNibName:@"SDGameVC9" bundle:nil] autorelease];
             self.gameVC9.gameDelegate = self;
-            [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:gameIndex withPath:@"sudoku9"]];
+            if (isRead == YES) {
+                [self.gameVC9 setView9NumberValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"answer"]];
+            }else{
+                [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:gameIndex withPath:@"sudoku9"]];
+            }
             [self addChildViewController:self.gameVC9];
         }
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -94,28 +103,42 @@
 #pragma mark -完成
 - (IBAction)startCoreMethod:(UIButton *)sender
 {
-    if ([[self currentAnswer] isEqualToString:@"less"]) {
-        return;
-    }
-    if ([SDCommonMethod testAnswer:[self currentAnswer] withGameModel:_currentModel])
+    if ([[self currentAnswer] isEqualToString:@"less"])
     {
-        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex +1)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"亲" withContent:@"您的答题不完整!" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
         [alert showView];
-        alert.leftBlock = ^(){
-            [self comeBackMethod:nil];
-        };
-        alert.rightBlock = ^(){
-            self.currentIndex ++;
-            if (self.currentModel == GAME_MODE_6)
-            {
-                [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku6"]];
-            }
-            else
-            {
-                [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku9"]];
-            }
-        };
         [alert release];
+        
+    }
+    else if ([SDCommonMethod testAnswer:[self currentAnswer] withGameModel:_currentModel])
+    {
+        self.currentIndex ++;
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:self.currentIndex] forKey:[NSString stringWithFormat:@"openInt%dmodel",self.currentModel]];
+        if (self.currentIndex == 36) {
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:0] forKey:@"openInt9model"];
+            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:@"6阶全关,9阶开启" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
+            [alert showView];
+            [alert release];
+        }
+        else
+        {
+            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex +1)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
+            [alert showView];
+            alert.leftBlock = ^(){
+                [self comeBackMethod:nil];
+            };
+            alert.rightBlock = ^(){
+                if (self.currentModel == GAME_MODE_6)
+                {
+                    [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku6"]];
+                }
+                else
+                {
+                    [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku9"]];
+                }
+            };
+            [alert release];
+        }
     }else{
         SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"请仔细检查" withContent:@"您的答案有误!" withLeftButtonTitle:@"知道了" withRightButtonTitle:nil];
         [alert showView];
@@ -202,7 +225,7 @@
  */
 - (void)mobiSageAdBannerClick:(MobiSageAdBanner*)adBanner
 {
-    NSLog(@"横幅广告被点击");
+    //NSLog(@"横幅广告被点击");
 }
 
 /**
@@ -211,7 +234,7 @@
  */
 - (void)mobiSageAdBannerSuccessToShowAd:(MobiSageAdBanner*)adBanner
 {
-    NSLog(@"横幅广告请求成功并展示广告");
+    //NSLog(@"横幅广告请求成功并展示广告");
 }
 /**
  *  adBanner请求失败
@@ -219,7 +242,7 @@
  */
 - (void)mobiSageAdBannerFaildToShowAd:(MobiSageAdBanner*)adBanner
 {
-    NSLog(@"横幅广告请求失败");
+    //NSLog(@"横幅广告请求失败");
 }
 /**
  *  adBanner被点击后弹出LandingSit
@@ -227,7 +250,7 @@
  */
 - (void)mobiSageAdBannerPopADWindow:(MobiSageAdBanner*)adBanner
 {
-    NSLog(@"被点击后弹出LandingSit");
+    //NSLog(@"被点击后弹出LandingSit");
 }
 /**
  *  adBanner弹出的LandingSit被关闭
@@ -235,10 +258,27 @@
  */
 - (void)mobiSageAdBannerHideADWindow:(MobiSageAdBanner*)adBanner
 {
-    NSLog(@"弹出的LandingSit被关闭");
+    //NSLog(@"弹出的LandingSit被关闭");
 }
 
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:YES];
+    if (!_resultArray) {
+        self.resultArray = [NSMutableArray array];
+    }
+    [self.resultArray removeAllObjects];
+    for (int i = 0; i < _currentModel * _currentModel; i ++) {
+        UIButton *btn = (self.currentModel == GAME_MODE_6)?((UIButton *)[self.gameVC6.view viewWithTag:BUTTON_TAG_BASE + i]):((UIButton *)[self.gameVC9.view viewWithTag:BUTTON_TAG_BASE + i]);
+        NSString *str = [btn titleForState:UIControlStateNormal];
+        if ([str isEqualToString:@" "] ) {
+            str = @"0";
+        }
+        [self.resultArray addObject:str];
+    }
+    NSString *string = [NSString stringWithFormat:@"%@",[self.resultArray componentsJoinedByString:@""]];
+    [[NSUserDefaults standardUserDefaults] setObject:string forKey:@"answer"];
+}
 - (void)dealloc {
     
     [_coreView release],_coreView = nil;

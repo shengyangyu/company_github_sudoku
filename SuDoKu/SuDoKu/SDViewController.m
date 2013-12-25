@@ -52,11 +52,20 @@
     //通知绑定
     [BPush bindChannel];
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"openInt9model"] integerValue] >= 0) {
+        self.button9.enabled = YES;
+    }
+}
+
 - (void)setChoiceVCLabelString:(NSString *)tltle
 {
     if (!_choiceVC)
     {
         self.choiceVC = [[[SDChoiceGameVC alloc] initWithNibName:@"SDChoiceGameVC" bundle:nil] autorelease];
+        self.choiceVC.currentModel = GAME_MODE_6;
         self.choiceVC.titleLabel.text = tltle;
         self.choiceVC.choiceDelegate = self;
         [self addChildViewController:self.choiceVC];
