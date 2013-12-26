@@ -39,10 +39,9 @@
     }
 }
 
-- (void)setView6NumberValue:(NSString *)data
+- (void)setView6NumberValue:(NSString *)data withQuesIndex:(NSInteger)index
 {
-    NSInteger currentIndex = [[[NSUserDefaults standardUserDefaults]objectForKey:@"openInt6dmodel"] integerValue];
-    NSString *quesStr = [SDCommonMethod getQuestionForIndex:currentIndex withPath:@"sudoku6"];
+    NSString *quesStr = [SDCommonMethod getQuestionForIndex:index withPath:@"sudoku6"];
     for (int i = 0; i < [data length]; i ++)
     {
         NSString *num = [data substringWithRange:NSMakeRange(i, 1)];

@@ -12,6 +12,7 @@
 #import "UIButton+Bootstrap.h"
 #import "SDCommonMethod.h"
 #import "BPush.h"
+#import "SDAlertView.h"
 
 @interface SDViewController ()<SDChoiceGameVCDelegate>
 
@@ -34,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self buttonCustomerMethod];
     
     adBanner = [[MobiSageAdBanner alloc] initWithAdSize:Ad_320X50 withDelegate:self];
@@ -55,9 +57,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"openInt9model"] integerValue] >= 0) {
-        self.button9.enabled = YES;
-    }
+
 }
 
 - (void)setChoiceVCLabelString:(NSString *)tltle
@@ -91,9 +91,15 @@
 
 - (IBAction)challengeMethod:(UIButton *)sender
 {
-    self.choiceVC.currentModel = GAME_MODE_9;
-    [self setChoiceVCLabelString:@"9 阶"];
-    [SDCommonMethod panIn:self.choiceVC.view withpParentView:self.view];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"openInt9model"] integerValue] >= 0)
+    {
+        self.choiceVC.currentModel = GAME_MODE_9;
+        [self setChoiceVCLabelString:@"9 阶"];
+        [SDCommonMethod panIn:self.choiceVC.view withpParentView:self.view];
+    }else{
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"不要急，慢慢来!" withContent:@"先完成前面的!" withLeftButtonTitle:nil withRightButtonTitle:@"知道了"];
+        [alert showView];
+    }
 }
 
 - (IBAction)fightMethod:(UIButton *)sender

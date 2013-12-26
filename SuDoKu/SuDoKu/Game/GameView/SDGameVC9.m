@@ -39,10 +39,9 @@
     }
 }
 
-- (void)setView9NumberValue:(NSString *)data
+- (void)setView9NumberValue:(NSString *)data withQuesIndex:(NSInteger)index
 {
-    NSInteger currentIndex = [[[NSUserDefaults standardUserDefaults]objectForKey:@"openInt9dmodel"] integerValue];
-    NSString *quesStr = [SDCommonMethod getQuestionForIndex:currentIndex withPath:@"sudoku9"];
+    NSString *quesStr = [SDCommonMethod getQuestionForIndex:index withPath:@"sudoku9"];
     for (int i = 0; i < [data length]; i ++)
     {
         NSString *num = [data substringWithRange:NSMakeRange(i, 1)];
@@ -54,10 +53,11 @@
             button.enabled = YES;
         }else{
             [button setTitle:num forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-            button.enabled = NO;
             if ([[quesStr substringWithRange:NSMakeRange(i, 1)]isEqualToString:@"0"]) {
                 button.enabled = YES;
+            }else{
+                [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+                button.enabled = NO;
             }
         }
     }

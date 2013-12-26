@@ -13,6 +13,6 @@
 
 @property (nonatomic,assign) id<SDGameProtocol> gameDelegate;
 
-- (void)setView6NumberValue:(NSString *)data;
+- (void)setView6NumberValue:(NSString *)data withQuesIndex:(NSInteger)index;
 
 @end

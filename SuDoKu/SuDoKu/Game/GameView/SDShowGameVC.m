@@ -45,9 +45,9 @@
             self.gameVC6 = [[[SDGameVC6 alloc] initWithNibName:@"SDGameVC6" bundle:nil] autorelease];
             self.gameVC6.gameDelegate = self;
             if (isRead == YES) {
-                [self.gameVC6 setView6NumberValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"answer"]];
+                [self.gameVC6 setView6NumberValue:[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"answer%dmodel%d",self.currentModel,gameIndex]] withQuesIndex:gameIndex];
             }else{
-                [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:gameIndex withPath:@"sudoku6"]];
+                [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:gameIndex withPath:@"sudoku6"]  withQuesIndex:gameIndex];
             }
             [self addChildViewController:self.gameVC6];
         }
@@ -57,9 +57,9 @@
             self.gameVC9 = [[[SDGameVC9 alloc] initWithNibName:@"SDGameVC9" bundle:nil] autorelease];
             self.gameVC9.gameDelegate = self;
             if (isRead == YES) {
-                [self.gameVC9 setView9NumberValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"answer"]];
+                [self.gameVC9 setView9NumberValue:[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"answer%dmodel%d",self.currentModel,gameIndex]] withQuesIndex:gameIndex];
             }else{
-                [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:gameIndex withPath:@"sudoku9"]];
+                [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:gameIndex withPath:@"sudoku9"] withQuesIndex:gameIndex];
             }
             [self addChildViewController:self.gameVC9];
         }
@@ -103,6 +103,7 @@
 #pragma mark -完成
 - (IBAction)startCoreMethod:(UIButton *)sender
 {
+    
     if ([[self currentAnswer] isEqualToString:@"less"])
     {
         SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"亲" withContent:@"您的答题不完整!" withLeftButtonTitle:nil withRightButtonTitle:@"知道了"];
@@ -112,17 +113,23 @@
     }
     else if ([SDCommonMethod testAnswer:[self currentAnswer] withGameModel:_currentModel])
     {
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:[NSString stringWithFormat:@"answer%dmodel%d",self.currentModel,self.currentIndex]];
         self.currentIndex ++;
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:self.currentIndex] forKey:[NSString stringWithFormat:@"openInt%dmodel",self.currentModel]];
         if (self.currentIndex == 36) {
+            self.currentIndex = 35;
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:self.currentIndex] forKey:[NSString stringWithFormat:@"openInt%dmodel",self.currentModel]];
             [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:0] forKey:@"openInt9model"];
             SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:@"6阶全关,9阶开启" withLeftButtonTitle:nil withRightButtonTitle:@"知道了"];
             [alert showView];
+            alert.rightBlock = ^(){
+                [self comeBackMethod:nil];
+            };
             [alert release];
         }
         else
         {
-            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex +1)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
+            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
             [alert showView];
             alert.leftBlock = ^(){
                 [self comeBackMethod:nil];
@@ -130,11 +137,11 @@
             alert.rightBlock = ^(){
                 if (self.currentModel == GAME_MODE_6)
                 {
-                    [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku6"]];
+                    [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku6"] withQuesIndex:self.currentIndex];
                 }
                 else
                 {
-                    [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku9"]];
+                    [self.gameVC9 setView9NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku9"] withQuesIndex:self.currentIndex];
                 }
             };
             [alert release];
@@ -144,6 +151,7 @@
         [alert showView];
         [alert release];
     }
+     
 }
 /**
  *  检测当前数据填充 以及答案的录入
@@ -277,7 +285,7 @@
         [self.resultArray addObject:str];
     }
     NSString *string = [NSString stringWithFormat:@"%@",[self.resultArray componentsJoinedByString:@""]];
-    [[NSUserDefaults standardUserDefaults] setObject:string forKey:@"answer"];
+    [[NSUserDefaults standardUserDefaults] setObject:string forKey:[NSString stringWithFormat:@"answer%dmodel%d",self.currentModel,self.currentIndex]];
 }
 - (void)dealloc {
     

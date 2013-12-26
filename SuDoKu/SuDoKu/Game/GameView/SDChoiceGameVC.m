@@ -86,7 +86,7 @@
     }
     else if (sender.tag - BUTTON_TAG_BASE < currentIndex)
     {
-        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"您将要清除当前存档!" withContent:@"开始其他关卡!" withLeftButtonTitle:@"返回" withRightButtonTitle:@"确定"];
+        SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"亲,这不是你的最高关卡!" withContent:@"要玩这个关卡?" withLeftButtonTitle:@"返回" withRightButtonTitle:@"确定"];
         [alert showView];
         alert.rightBlock = ^(){
             SDShowGameVC *vc = [[[SDShowGameVC alloc] initWithNibName:@"SDShowGameVC" bundle:nil withGameModel:self.currentModel withGameIndex:sender.tag - BUTTON_TAG_BASE withIsRead:NO] autorelease];
@@ -99,8 +99,7 @@
     else
     {
         BOOL read = NO;
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"answer"] != nil) {
-            NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"answer"]);
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"answer%dmodel%d",self.currentModel,sender.tag - BUTTON_TAG_BASE]] != nil) {
             read = YES;
         }
         SDShowGameVC *vc = [[[SDShowGameVC alloc] initWithNibName:@"SDShowGameVC" bundle:nil withGameModel:self.currentModel withGameIndex:sender.tag - BUTTON_TAG_BASE withIsRead:read] autorelease];
