@@ -38,6 +38,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
         self.currentIndex = gameIndex;
         if (gameModel == GAME_MODE_6)
         {
@@ -72,6 +73,7 @@
 {
     [super viewDidLoad];
     [self displayGameView];
+    self.titleLabel.text = [NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex%9+1)];
 }
 #pragma mark -添加游戏格子
 - (void)displayGameView
@@ -129,12 +131,13 @@
         }
         else
         {
-            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
+            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex%9+1)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
             [alert showView];
             alert.leftBlock = ^(){
                 [self comeBackMethod:nil];
             };
             alert.rightBlock = ^(){
+                self.titleLabel.text = [NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex%9+1)];
                 if (self.currentModel == GAME_MODE_6)
                 {
                     [self.gameVC6 setView6NumberValue:[SDCommonMethod getQuestionForIndex:self.currentIndex withPath:@"sudoku6"] withQuesIndex:self.currentIndex];
@@ -296,6 +299,7 @@
     [_contentView release];
     [_comebackBtn release];
     [_lastBtn release];
+    [_titleLabel release];
     [super dealloc];
 }
 

@@ -10,6 +10,7 @@
                 <outlet property="comebackBtn" destination="vgU-Cs-tQg" id="yca-O3-R2B"/>
                 <outlet property="contentView" destination="4SN-dJ-Ieh" id="z8b-a3-of8"/>
                 <outlet property="lastBtn" destination="KJQ-r0-94U" id="84r-FK-JNz"/>
+                <outlet property="titleLabel" destination="2Dm-K6-Ekb" id="43E-ye-AWJ"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -60,6 +61,13 @@
                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Dm-K6-Ekb">
+                    <rect key="frame" x="70" y="58" width="180" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.85209803427419206" green="0.21430821572580644" blue="0.73453251008064513" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

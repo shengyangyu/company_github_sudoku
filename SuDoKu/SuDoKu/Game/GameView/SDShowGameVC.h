@@ -18,6 +18,7 @@
 @property (retain, nonatomic) IBOutlet UIView *contentView;
 @property (retain, nonatomic) IBOutlet UIButton *comebackBtn;
 @property (retain, nonatomic) IBOutlet UIButton *lastBtn;
+@property (retain, nonatomic) IBOutlet UILabel *titleLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withGameModel:(NSInteger)gameModel withGameIndex:(NSInteger)gameIndex withIsRead:(BOOL)isRead;
 

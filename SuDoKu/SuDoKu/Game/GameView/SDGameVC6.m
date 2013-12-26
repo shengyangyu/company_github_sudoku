@@ -48,6 +48,7 @@
         UIButton *button = (UIButton *)[self.view viewWithTag:i + BUTTON_TAG_BASE];
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"select_push" ofType:@"png"];
         [button setBackgroundImage:[UIImage imageWithContentsOfFile:filePath] forState:UIControlStateSelected];
+        [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         if ([num isEqualToString:@"0"]) {
             [button setTitle:@" " forState:UIControlStateNormal];
             button.enabled = YES;

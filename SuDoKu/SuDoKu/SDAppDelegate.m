@@ -31,7 +31,7 @@
     [application setApplicationIconBadgeNumber:0];
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
     
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:0] forKey:@"openInt6model"];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:17] forKey:@"openInt6model"];
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:-1] forKey:@"openInt9model"];
     return YES;
 }
