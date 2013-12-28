@@ -13,6 +13,7 @@
 #import "SDCommonMethod.h"
 #import "BPush.h"
 #import "SDAlertView.h"
+#import "SDMoreVC.h"
 
 @interface SDViewController ()<SDChoiceGameVCDelegate>
 
@@ -52,7 +53,11 @@
     [self.view addSubview:bottomAdBanner];
     [bottomAdBanner release];
     //通知绑定
-    [BPush bindChannel];
+    if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"bindChannel" ]isEqualToString:@"first"])
+    {
+        [BPush bindChannel];
+    }
+    
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -104,7 +109,10 @@
 
 - (IBAction)fightMethod:(UIButton *)sender
 {
-
+    SDMoreVC *vc = [[[SDMoreVC alloc] initWithNibName:@"SDMoreVC" bundle:nil] autorelease];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 #pragma mark -SDChoiceGameVCDelegate

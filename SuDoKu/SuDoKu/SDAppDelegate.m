@@ -28,11 +28,14 @@
      */
     [BPush setupChannel:launchOptions];
     [BPush setDelegate:self];
-    [application setApplicationIconBadgeNumber:0];
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:17] forKey:@"openInt6model"];
+    [application setApplicationIconBadgeNumber:0];
+
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:18] forKey:@"openInt6model"];
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:-1] forKey:@"openInt9model"];
+    //只需要注册一次 在注册的代理里面写好
+    [[NSUserDefaults standardUserDefaults] setObject:@"empty" forKey:@"bindChannel"];
+    
     return YES;
 }
 
@@ -70,7 +73,6 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     
-     [application setApplicationIconBadgeNumber:0];
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
@@ -124,15 +126,25 @@
  */
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
+    //不需要解析出来 我这个就是在用户没有玩的时候显示
+    //NSLog(@"didReceiveRemoteNotification:");
+    /*
     NSString *alert = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
     if (application.applicationState == UIApplicationStateActive)
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"指尖数独通知"message:[NSString stringWithFormat:@"%@", alert]delegate:self cancelButtonTitle:@"知道了"otherButtonTitles:nil];
         [alertView show];
     }
-    [application setApplicationIconBadgeNumber:1];
+
     [BPush handleNotification:userInfo];
+     */
 }
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    //NSLog(@"didReceiveLocalNotification:");
+}
+
 /**
  *   绑定 解除绑定 等等代理
  *
@@ -141,11 +153,13 @@
  */
 - (void) onMethod:(NSString*)method response:(NSDictionary*)data
 {
-    
+    //只需要注册一次 在注册的代理里面写好
+    [[NSUserDefaults standardUserDefaults] setObject:@"first" forKey:@"bindChannel"];
 }
 //请求通知后调用
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
+     NSLog(@"didRegisterForRemoteNotificationsWithDeviceToken:");
     [BPush registerDeviceToken: deviceToken];
 }
 @end

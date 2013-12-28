@@ -143,11 +143,6 @@
     return isSuccess;
 }
 
-- (void)cutAnswerStr:(NSString *)data
-{
-
-
-}
 
 #pragma mark - 出现 消失 动画 
 + (void)fadeIn:(UIView *)view

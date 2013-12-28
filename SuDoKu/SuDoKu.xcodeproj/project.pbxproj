@@ -48,6 +48,11 @@
 		0785DCFD18596AAF0020F371 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0785DCFC18596AAF0020F371 /* FontAwesome.ttf */; };
 		079298261850700300DD2DB1 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 079298251850700300DD2DB1 /* libstdc++.6.0.9.dylib */; };
 		079298361850746500DD2DB1 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079298351850746500DD2DB1 /* TesseractOCR.framework */; };
+		079D1B50186D26C300C1DAFE /* SDMoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1B4E186D26C300C1DAFE /* SDMoreVC.m */; };
+		079D1B51186D26C300C1DAFE /* SDMoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079D1B4F186D26C300C1DAFE /* SDMoreVC.xib */; };
+		079D1B54186D299B00C1DAFE /* libMobiSageRecommend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D1B52186D299B00C1DAFE /* libMobiSageRecommend.a */; };
+		079D1B55186D299B00C1DAFE /* MobiSageRecommendBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 079D1B53186D299B00C1DAFE /* MobiSageRecommendBundle.bundle */; };
+		07A74BB3186D6F180080EB87 /* SDReadFileShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A74BB2186D6F180080EB87 /* SDReadFileShared.m */; };
 		07C38B6A18643918007C7ABA /* SDDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C38B6918643918007C7ABA /* SDDispatchTimer.m */; };
 		07C39125184CA0580087293E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C39124184CA0580087293E /* Foundation.framework */; };
 		07C39127184CA0580087293E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C39126184CA0580087293E /* CoreGraphics.framework */; };
@@ -137,6 +142,13 @@
 		0785DCFC18596AAF0020F371 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		079298251850700300DD2DB1 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		079298351850746500DD2DB1 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = Products/TesseractOCR.framework; sourceTree = "<group>"; };
+		079D1B4D186D26C300C1DAFE /* SDMoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMoreVC.h; sourceTree = "<group>"; };
+		079D1B4E186D26C300C1DAFE /* SDMoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMoreVC.m; sourceTree = "<group>"; };
+		079D1B4F186D26C300C1DAFE /* SDMoreVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDMoreVC.xib; sourceTree = "<group>"; };
+		079D1B52186D299B00C1DAFE /* libMobiSageRecommend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobiSageRecommend.a; sourceTree = "<group>"; };
+		079D1B53186D299B00C1DAFE /* MobiSageRecommendBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobiSageRecommendBundle.bundle; sourceTree = "<group>"; };
+		07A74BB1186D6F180080EB87 /* SDReadFileShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDReadFileShared.h; sourceTree = "<group>"; };
+		07A74BB2186D6F180080EB87 /* SDReadFileShared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDReadFileShared.m; sourceTree = "<group>"; };
 		07C38B6818643918007C7ABA /* SDDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDispatchTimer.h; sourceTree = "<group>"; };
 		07C38B6918643918007C7ABA /* SDDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDispatchTimer.m; sourceTree = "<group>"; };
 		07C39121184CA0580087293E /* SuDoKu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuDoKu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				068955F91869CCD8006CF114 /* libz.dylib in Frameworks */,
+				079D1B54186D299B00C1DAFE /* libMobiSageRecommend.a in Frameworks */,
 				070CA8271868334D00E70375 /* SystemConfiguration.framework in Frameworks */,
 				068955F71869CCB8006CF114 /* CFNetwork.framework in Frameworks */,
 				070CA82B1868336200E70375 /* CoreTelephony.framework in Frameworks */,
@@ -202,6 +215,8 @@
 		060E41C1186872B7004FC888 /* MobiSageSDK */ = {
 			isa = PBXGroup;
 			children = (
+				079D1B52186D299B00C1DAFE /* libMobiSageRecommend.a */,
+				079D1B53186D299B00C1DAFE /* MobiSageRecommendBundle.bundle */,
 				060E41CB18687675004FC888 /* libMobiSageSDK.a */,
 				060E41C2186872B7004FC888 /* JSONKit.h */,
 				060E41C3186872B7004FC888 /* JSONKit.m */,
@@ -249,6 +264,7 @@
 		074017511851CDF500DB09F6 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				079D1B4C186D267A00C1DAFE /* OtherView */,
 				077F09DA185566CA005BA49E /* GameView */,
 			);
 			path = Game;
@@ -280,6 +296,8 @@
 		0740176A1851CEEF00DB09F6 /* MethodBlock */ = {
 			isa = PBXGroup;
 			children = (
+				07A74BB1186D6F180080EB87 /* SDReadFileShared.h */,
+				07A74BB2186D6F180080EB87 /* SDReadFileShared.m */,
 				074017751851D00600DB09F6 /* SDCommonMethod.h */,
 				074017761851D00600DB09F6 /* SDCommonMethod.m */,
 				074017781851D33E00DB09F6 /* SDCommonDefine.h */,
@@ -324,6 +342,16 @@
 				0731F53118599518009A72AC /* SDShowGameVC.xib */,
 			);
 			path = GameView;
+			sourceTree = "<group>";
+		};
+		079D1B4C186D267A00C1DAFE /* OtherView */ = {
+			isa = PBXGroup;
+			children = (
+				079D1B4D186D26C300C1DAFE /* SDMoreVC.h */,
+				079D1B4E186D26C300C1DAFE /* SDMoreVC.m */,
+				079D1B4F186D26C300C1DAFE /* SDMoreVC.xib */,
+			);
+			path = OtherView;
 			sourceTree = "<group>";
 		};
 		07C39118184CA0580087293E = {
@@ -497,6 +525,7 @@
 				068955F31869C54D006CF114 /* BPushConfig.plist in Resources */,
 				0646AC0D18560EBB00FC8F5F /* sudoku9.txt in Resources */,
 				060E41CE18687DEC004FC888 /* topimage.jpg in Resources */,
+				079D1B51186D26C300C1DAFE /* SDMoreVC.xib in Resources */,
 				068955F51869C555006CF114 /* cat.caf in Resources */,
 				07C62F0A1856BEA8007CDC10 /* heb-seg.traineddata in Resources */,
 				077F09DF185566F8005BA49E /* SDGameVC6.xib in Resources */,
@@ -506,6 +535,7 @@
 				07C39137184CA0580087293E /* Images.xcassets in Resources */,
 				0731F53D18599582009A72AC /* SDChoiceGameVC.xib in Resources */,
 				065186EC185B60C10047A360 /* background_image.jpg in Resources */,
+				079D1B55186D299B00C1DAFE /* MobiSageRecommendBundle.bundle in Resources */,
 				0731F543185999CD009A72AC /* SDCoreVC.xib in Resources */,
 				0731F53318599518009A72AC /* SDShowGameVC.xib in Resources */,
 			);
@@ -537,12 +567,14 @@
 				068955EF1869C4D7006CF114 /* GzipCompressor.m in Sources */,
 				07C39156184CA07A0087293E /* SDViewController.m in Sources */,
 				068955EE1869C4D7006CF114 /* Base64.m in Sources */,
+				07A74BB3186D6F180080EB87 /* SDReadFileShared.m in Sources */,
 				074017771851D00600DB09F6 /* SDCommonMethod.m in Sources */,
 				077F09DE185566F8005BA49E /* SDGameVC6.m in Sources */,
 				07C38B6A18643918007C7ABA /* SDDispatchTimer.m in Sources */,
 				0731F53218599518009A72AC /* SDShowGameVC.m in Sources */,
 				076E993D1863E500006C0CC7 /* SDAlertView.m in Sources */,
 				060E41C8186872B7004FC888 /* JSONKit.m in Sources */,
+				079D1B50186D26C300C1DAFE /* SDMoreVC.m in Sources */,
 				07C39135184CA0580087293E /* SDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +712,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
 					"$(SRCROOT)/SuDoKu/Common/BaiduPushSDK",
+					/Users/amariyangge/Desktop/company_github_sudoku/SuDoKu/SuDoKu/Common/MobiSageSDK,
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -708,6 +741,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
 					"$(SRCROOT)/SuDoKu/Common/BaiduPushSDK",
+					/Users/amariyangge/Desktop/company_github_sudoku/SuDoKu/SuDoKu/Common/MobiSageSDK,
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
