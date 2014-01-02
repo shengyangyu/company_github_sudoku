@@ -131,7 +131,7 @@
         }
         else
         {
-            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 +1),(self.currentIndex%9+1)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
+            SDAlertView *alert = [[SDAlertView alloc] initWithTitle:@"恭喜您,成功通过" withContent:[NSString stringWithFormat:@"%d阶%d段第%d关",self.currentModel,(self.currentIndex/9 ),(self.currentIndex%9+1)] withLeftButtonTitle:@"返回" withRightButtonTitle:@"下一关"];
             [alert showView];
             alert.leftBlock = ^(){
                 [self comeBackMethod:nil];
