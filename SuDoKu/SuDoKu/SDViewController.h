@@ -10,10 +10,11 @@
 #import <UIKit/UIKit.h>
 #import "MobiSageSDK.h"
 
-@interface SDViewController : UIViewController<MobiSageAdBannerDelegate>
+@interface SDViewController: UIViewController<MobiSageAdBannerDelegate,MobiSageRecommendDelegate>
 {
     MobiSageAdBanner * adBanner;
     MobiSageAdBanner * bottomAdBanner;
+    MobiSageRecommendView *recomendView;
 }
 
 @property (retain, nonatomic) IBOutlet UIButton *button6;

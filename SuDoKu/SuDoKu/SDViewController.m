@@ -109,10 +109,18 @@
 
 - (IBAction)fightMethod:(UIButton *)sender
 {
+    /*
     SDMoreVC *vc = [[[SDMoreVC alloc] initWithNibName:@"SDMoreVC" bundle:nil] autorelease];
     [self presentViewController:vc animated:YES completion:^{
         
     }];
+     */
+    if (recomendView == nil)
+    {
+        recomendView = [[MobiSageRecommendView alloc] initWithDelegate:self];
+    }
+    [self.view addSubview:recomendView];
+    [recomendView OpenAdSageRecmdModalView];
 }
 
 #pragma mark -SDChoiceGameVCDelegate
@@ -133,7 +141,7 @@
  */
 - (void)mobiSageAdBannerClick:(MobiSageAdBanner*)adBanner
 {
-//    NSLog(@"横幅广告被点击");
+ //    NSLog(@"横幅广告被点击");
 }
 
 /**
@@ -142,7 +150,7 @@
  */
 - (void)mobiSageAdBannerSuccessToShowAd:(MobiSageAdBanner*)adBanner
 {
-//    NSLog(@"横幅广告请求成功并展示广告");
+ //    NSLog(@"横幅广告请求成功并展示广告");
 }
 /**
  *  adBanner请求失败
@@ -150,7 +158,7 @@
  */
 - (void)mobiSageAdBannerFaildToShowAd:(MobiSageAdBanner*)adBanner
 {
-//    NSLog(@"横幅广告请求失败");
+ //    NSLog(@"横幅广告请求失败");
 }
 /**
  *  adBanner被点击后弹出LandingSit
@@ -158,7 +166,7 @@
  */
 - (void)mobiSageAdBannerPopADWindow:(MobiSageAdBanner*)adBanner
 {
-//    NSLog(@"被点击后弹出LandingSit");
+ //    NSLog(@"被点击后弹出LandingSit");
 }
 /**
  *  adBanner弹出的LandingSit被关闭
@@ -166,7 +174,45 @@
  */
 - (void)mobiSageAdBannerHideADWindow:(MobiSageAdBanner*)adBanner
 {
-//    NSLog(@"弹出的LandingSit被关闭");
+ //    NSLog(@"弹出的LandingSit被关闭");
+}
+
+
+#pragma mark - MobiSageRecommendDelegate 委托函数
+#pragma mark
+
+- (UIViewController *)viewControllerForPresentingModalView {
+    
+    return self;
+}
+/**
+ *  应用推荐界面打开时调用
+ */
+
+- (void)MobiSageWillOpenRecommendModalView
+{
+    //    NSLog(@"应用推荐界面打开");
+}
+/**
+ *  应用推荐界面打开失败时调用
+ */
+- (void)MobiSageFailToOpenRecommendModalView
+{
+    //    NSLog(@"应用推荐打开失败");
+}
+/**
+ *  应用推荐界面关闭时调用
+ */
+- (void)MobiSageDidCloseRecommendModalView
+{
+    //    NSLog(@"应用推荐关闭");
+}
+
+//弹出荐计划广告的按钮触摸事件响应函数
+- (void)openRecommendView {
+    
+    [recomendView OpenAdSageRecmdModalView];
+    
 }
 
 
