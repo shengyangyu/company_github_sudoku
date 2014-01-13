@@ -32,7 +32,7 @@
     [application setApplicationIconBadgeNumber:0];
 
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:0] forKey:@"openInt6model"];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:0] forKey:@"openInt9model"];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:-1] forKey:@"openInt9model"];
     //只需要注册一次 在注册的代理里面写好
     [[NSUserDefaults standardUserDefaults] setObject:@"empty" forKey:@"bindChannel"];
     

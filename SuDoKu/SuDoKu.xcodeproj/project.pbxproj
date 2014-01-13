@@ -634,8 +634,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hui tian (AD2W7FP84T)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hui tian (AD2W7FP84T)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hui tian (4U8Y8YRC54)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hui tian (4U8Y8YRC54)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -674,8 +674,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hui tian (AD2W7FP84T)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hui tian (AD2W7FP84T)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hui tian (4U8Y8YRC54)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hui tian (4U8Y8YRC54)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -699,7 +699,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hui tian (AD2W7FP84T)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hui tian (4U8Y8YRC54)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Products",
 					"$(inherited)",
@@ -712,7 +712,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
 					"$(SRCROOT)/SuDoKu/Common/BaiduPushSDK",
-					/Users/amariyangge/Desktop/company_github_sudoku/SuDoKu/SuDoKu/Common/MobiSageSDK,
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -728,7 +727,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hui tian (AD2W7FP84T)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hui tian (4U8Y8YRC54)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Products",
 					"$(inherited)",
@@ -741,7 +740,6 @@
 					"$(inherited)",
 					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
 					"$(SRCROOT)/SuDoKu/Common/BaiduPushSDK",
-					/Users/amariyangge/Desktop/company_github_sudoku/SuDoKu/SuDoKu/Common/MobiSageSDK,
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
