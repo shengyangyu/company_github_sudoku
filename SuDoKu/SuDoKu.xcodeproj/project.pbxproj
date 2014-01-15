@@ -12,6 +12,8 @@
 		060E41CC18687675004FC888 /* libMobiSageSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 060E41CB18687675004FC888 /* libMobiSageSDK.a */; };
 		060E41CE18687DEC004FC888 /* topimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 060E41CD18687DEC004FC888 /* topimage.jpg */; };
 		0646AC0D18560EBB00FC8F5F /* sudoku9.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0646AC0C18560EBB00FC8F5F /* sudoku9.txt */; };
+		064AE2C31886E4E0009269AE /* 证书1.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 064AE2C11886E4E0009269AE /* 证书1.p12 */; };
+		064AE2C41886E4E0009269AE /* 证书2.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 064AE2C21886E4E0009269AE /* 证书2.p12 */; };
 		065186EC185B60C10047A360 /* background_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 065186EB185B60C10047A360 /* background_image.jpg */; };
 		068955ED1869C4D7006CF114 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 068955E21869C4D7006CF114 /* libBPush.a */; };
 		068955EE1869C4D7006CF114 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 068955E51869C4D7006CF114 /* Base64.m */; };
@@ -96,6 +98,8 @@
 		060E41CB18687675004FC888 /* libMobiSageSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobiSageSDK.a; sourceTree = "<group>"; };
 		060E41CD18687DEC004FC888 /* topimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = topimage.jpg; sourceTree = "<group>"; };
 		0646AC0C18560EBB00FC8F5F /* sudoku9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sudoku9.txt; sourceTree = "<group>"; };
+		064AE2C11886E4E0009269AE /* 证书1.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "证书1.p12"; sourceTree = "<group>"; };
+		064AE2C21886E4E0009269AE /* 证书2.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "证书2.p12"; sourceTree = "<group>"; };
 		065186EB185B60C10047A360 /* background_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image.jpg; sourceTree = "<group>"; };
 		068955E11869C4D7006CF114 /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
 		068955E21869C4D7006CF114 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
@@ -237,6 +241,15 @@
 				060E41C7186872B7004FC888 /* Reachability.m */,
 			);
 			path = MobiSageSDK;
+			sourceTree = "<group>";
+		};
+		064AE2C01886E4E0009269AE /* zhengshu */ = {
+			isa = PBXGroup;
+			children = (
+				064AE2C11886E4E0009269AE /* 证书1.p12 */,
+				064AE2C21886E4E0009269AE /* 证书2.p12 */,
+			);
+			path = zhengshu;
 			sourceTree = "<group>";
 		};
 		068955E01869C4D7006CF114 /* BaiduPushSDK */ = {
@@ -424,6 +437,7 @@
 		07C3912A184CA0580087293E /* SuDoKu */ = {
 			isa = PBXGroup;
 			children = (
+				064AE2C01886E4E0009269AE /* zhengshu */,
 				07C39136184CA0580087293E /* Images.xcassets */,
 				07C39133184CA0580087293E /* SDAppDelegate.h */,
 				07C39134184CA0580087293E /* SDAppDelegate.m */,
@@ -554,6 +568,7 @@
 				068955F31869C54D006CF114 /* BPushConfig.plist in Resources */,
 				0646AC0D18560EBB00FC8F5F /* sudoku9.txt in Resources */,
 				07240F15188666FE003F2F4E /* Icon@2x.png in Resources */,
+				064AE2C41886E4E0009269AE /* 证书2.p12 in Resources */,
 				060E41CE18687DEC004FC888 /* topimage.jpg in Resources */,
 				07240F13188666FE003F2F4E /* Icon-Small@2x.png in Resources */,
 				079D1B51186D26C300C1DAFE /* SDMoreVC.xib in Resources */,
@@ -572,6 +587,7 @@
 				065186EC185B60C10047A360 /* background_image.jpg in Resources */,
 				079D1B55186D299B00C1DAFE /* MobiSageRecommendBundle.bundle in Resources */,
 				0731F543185999CD009A72AC /* SDCoreVC.xib in Resources */,
+				064AE2C31886E4E0009269AE /* 证书1.p12 in Resources */,
 				0731F53318599518009A72AC /* SDShowGameVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,7 +685,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -709,7 +725,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
