@@ -30,6 +30,12 @@
 		070CA82D1868336900E70375 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA82C1868336900E70375 /* MessageUI.framework */; };
 		070CA82F1868337100E70375 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA82E1868337100E70375 /* AdSupport.framework */; };
 		070CA8311868337800E70375 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA8301868337800E70375 /* StoreKit.framework */; };
+		07240F12188666FE003F2F4E /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F0C188666FE003F2F4E /* Icon-Small.png */; };
+		07240F13188666FE003F2F4E /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F0D188666FE003F2F4E /* Icon-Small@2x.png */; };
+		07240F14188666FE003F2F4E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F0E188666FE003F2F4E /* Icon.png */; };
+		07240F15188666FE003F2F4E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F0F188666FE003F2F4E /* Icon@2x.png */; };
+		07240F16188666FE003F2F4E /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F10188666FE003F2F4E /* Icon-120.png */; };
+		07240F17188666FE003F2F4E /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F11188666FE003F2F4E /* Icon-80.png */; };
 		0731F53218599518009A72AC /* SDShowGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731F53018599518009A72AC /* SDShowGameVC.m */; };
 		0731F53318599518009A72AC /* SDShowGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0731F53118599518009A72AC /* SDShowGameVC.xib */; };
 		0731F53C18599582009A72AC /* SDChoiceGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731F53918599582009A72AC /* SDChoiceGameVC.m */; };
@@ -113,6 +119,12 @@
 		070CA82C1868336900E70375 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		070CA82E1868337100E70375 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		070CA8301868337800E70375 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		07240F0C188666FE003F2F4E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		07240F0D188666FE003F2F4E /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		07240F0E188666FE003F2F4E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		07240F0F188666FE003F2F4E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		07240F10188666FE003F2F4E /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		07240F11188666FE003F2F4E /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		0731F52F18599518009A72AC /* SDShowGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDShowGameVC.h; sourceTree = "<group>"; };
 		0731F53018599518009A72AC /* SDShowGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDShowGameVC.m; sourceTree = "<group>"; };
 		0731F53118599518009A72AC /* SDShowGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDShowGameVC.xib; sourceTree = "<group>"; };
@@ -259,6 +271,19 @@
 				07094556185847FE002B7C2A /* select_push.png */,
 			);
 			path = ImageBlock;
+			sourceTree = "<group>";
+		};
+		07240F0B188666FE003F2F4E /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				07240F0C188666FE003F2F4E /* Icon-Small.png */,
+				07240F0D188666FE003F2F4E /* Icon-Small@2x.png */,
+				07240F0E188666FE003F2F4E /* Icon.png */,
+				07240F0F188666FE003F2F4E /* Icon@2x.png */,
+				07240F10188666FE003F2F4E /* Icon-120.png */,
+				07240F11188666FE003F2F4E /* Icon-80.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 		074017511851CDF500DB09F6 /* Game */ = {
@@ -415,6 +440,7 @@
 		07C3912B184CA0580087293E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07240F0B188666FE003F2F4E /* icons */,
 				068955F41869C555006CF114 /* cat.caf */,
 				068955F21869C54D006CF114 /* BPushConfig.plist */,
 				07C3912C184CA0580087293E /* SuDoKu-Info.plist */,
@@ -491,6 +517,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = com.ysy.www;
 				TargetAttributes = {
+					07C39120184CA0580087293E = {
+						DevelopmentTeam = 4U8Y8YRC54;
+					};
 					07C3913B184CA0590087293E = {
 						TestTargetID = 07C39120184CA0580087293E;
 					};
@@ -524,15 +553,21 @@
 				07094557185847FE002B7C2A /* select_push.png in Resources */,
 				068955F31869C54D006CF114 /* BPushConfig.plist in Resources */,
 				0646AC0D18560EBB00FC8F5F /* sudoku9.txt in Resources */,
+				07240F15188666FE003F2F4E /* Icon@2x.png in Resources */,
 				060E41CE18687DEC004FC888 /* topimage.jpg in Resources */,
+				07240F13188666FE003F2F4E /* Icon-Small@2x.png in Resources */,
 				079D1B51186D26C300C1DAFE /* SDMoreVC.xib in Resources */,
+				07240F14188666FE003F2F4E /* Icon.png in Resources */,
 				068955F51869C555006CF114 /* cat.caf in Resources */,
+				07240F12188666FE003F2F4E /* Icon-Small.png in Resources */,
 				07C62F0A1856BEA8007CDC10 /* heb-seg.traineddata in Resources */,
 				077F09DF185566F8005BA49E /* SDGameVC6.xib in Resources */,
+				07240F17188666FE003F2F4E /* Icon-80.png in Resources */,
 				07C39157184CA07A0087293E /* SDViewController.xib in Resources */,
 				077F09E418556721005BA49E /* SDGameVC9.xib in Resources */,
 				07C3912F184CA0580087293E /* InfoPlist.strings in Resources */,
 				07C39137184CA0580087293E /* Images.xcassets in Resources */,
+				07240F16188666FE003F2F4E /* Icon-120.png in Resources */,
 				0731F53D18599582009A72AC /* SDChoiceGameVC.xib in Resources */,
 				065186EC185B60C10047A360 /* background_image.jpg in Resources */,
 				079D1B55186D299B00C1DAFE /* MobiSageRecommendBundle.bundle in Resources */,
@@ -634,8 +669,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hui tian (4U8Y8YRC54)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hui tian (4U8Y8YRC54)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -651,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -674,8 +709,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hui tian (4U8Y8YRC54)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hui tian (4U8Y8YRC54)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -685,7 +720,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -699,7 +734,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hui tian (4U8Y8YRC54)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Products",
 					"$(inherited)",
@@ -707,7 +743,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuDoKu/SuDoKu-Prefix.pch";
 				INFOPLIST_FILE = "SuDoKu/SuDoKu-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
@@ -715,6 +751,7 @@
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -727,7 +764,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hui tian (4U8Y8YRC54)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Products",
 					"$(inherited)",
@@ -735,7 +773,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuDoKu/SuDoKu-Prefix.pch";
 				INFOPLIST_FILE = "SuDoKu/SuDoKu-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/SuDoKu/Common/MobiSageSDK",
@@ -743,6 +781,7 @@
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
