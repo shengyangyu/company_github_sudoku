@@ -16,6 +16,9 @@
     MobiSageAdBanner * bottomAdBanner;
     MobiSageRecommendView *recomendView;
 }
+@property (retain, nonatomic) IBOutlet UIImageView *topImageView;
+
+@property (retain, nonatomic) IBOutlet UIImageView *bottomImageView;
 
 @property (retain, nonatomic) IBOutlet UIButton *button6;
 

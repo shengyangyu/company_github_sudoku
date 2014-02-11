@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>指尖数独1.0</string>
+	<string>指尖数独</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
@@ -18,7 +18,7 @@
 		<string>Icon-80.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.ysyPushAppID</string>
+	<string>com.deirlym.SuDoKu</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

@@ -31,7 +31,6 @@
 		070CA82B1868336200E70375 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA82A1868336200E70375 /* CoreTelephony.framework */; };
 		070CA82D1868336900E70375 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA82C1868336900E70375 /* MessageUI.framework */; };
 		070CA82F1868337100E70375 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA82E1868337100E70375 /* AdSupport.framework */; };
-		070CA8311868337800E70375 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070CA8301868337800E70375 /* StoreKit.framework */; };
 		07240F12188666FE003F2F4E /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F0C188666FE003F2F4E /* Icon-Small.png */; };
 		07240F13188666FE003F2F4E /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F0D188666FE003F2F4E /* Icon-Small@2x.png */; };
 		07240F14188666FE003F2F4E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07240F0E188666FE003F2F4E /* Icon.png */; };
@@ -77,6 +76,8 @@
 		07C39156184CA07A0087293E /* SDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C39154184CA07A0087293E /* SDViewController.m */; };
 		07C39157184CA07A0087293E /* SDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C39155184CA07A0087293E /* SDViewController.xib */; };
 		07C62F0A1856BEA8007CDC10 /* heb-seg.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 07C62F081856BEA8007CDC10 /* heb-seg.traineddata */; };
+		07FEB16218A9D0AB00E7DDFD /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEB16018A9D0AB00E7DDFD /* top.png */; };
+		07FEB16318A9D0AB00E7DDFD /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FEB16118A9D0AB00E7DDFD /* bottom.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +123,6 @@
 		070CA82A1868336200E70375 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		070CA82C1868336900E70375 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		070CA82E1868337100E70375 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		070CA8301868337800E70375 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		07240F0C188666FE003F2F4E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		07240F0D188666FE003F2F4E /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		07240F0E188666FE003F2F4E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -187,6 +187,8 @@
 		07C39154184CA07A0087293E /* SDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDViewController.m; sourceTree = "<group>"; };
 		07C39155184CA07A0087293E /* SDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDViewController.xib; sourceTree = "<group>"; };
 		07C62F081856BEA8007CDC10 /* heb-seg.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = "heb-seg.traineddata"; sourceTree = "<group>"; };
+		07FEB16018A9D0AB00E7DDFD /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
+		07FEB16118A9D0AB00E7DDFD /* bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +201,6 @@
 				070CA8271868334D00E70375 /* SystemConfiguration.framework in Frameworks */,
 				068955F71869CCB8006CF114 /* CFNetwork.framework in Frameworks */,
 				070CA82B1868336200E70375 /* CoreTelephony.framework in Frameworks */,
-				070CA8311868337800E70375 /* StoreKit.framework in Frameworks */,
 				068955ED1869C4D7006CF114 /* libBPush.a in Frameworks */,
 				070CA82F1868337100E70375 /* AdSupport.framework in Frameworks */,
 				070CA82D1868336900E70375 /* MessageUI.framework in Frameworks */,
@@ -279,6 +280,8 @@
 		07094555185847F8002B7C2A /* ImageBlock */ = {
 			isa = PBXGroup;
 			children = (
+				07FEB16018A9D0AB00E7DDFD /* top.png */,
+				07FEB16118A9D0AB00E7DDFD /* bottom.png */,
 				060E41CD18687DEC004FC888 /* topimage.jpg */,
 				065186EB185B60C10047A360 /* background_image.jpg */,
 				07094556185847FE002B7C2A /* select_push.png */,
@@ -416,7 +419,6 @@
 			children = (
 				068955F81869CCD8006CF114 /* libz.dylib */,
 				068955F61869CCB8006CF114 /* CFNetwork.framework */,
-				070CA8301868337800E70375 /* StoreKit.framework */,
 				070CA82E1868337100E70375 /* AdSupport.framework */,
 				070CA82C1868336900E70375 /* MessageUI.framework */,
 				070CA82A1868336200E70375 /* CoreTelephony.framework */,
@@ -532,7 +534,12 @@
 				ORGANIZATIONNAME = com.ysy.www;
 				TargetAttributes = {
 					07C39120184CA0580087293E = {
-						DevelopmentTeam = 4U8Y8YRC54;
+						DevelopmentTeam = J42SFEHKFX;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					07C3913B184CA0590087293E = {
 						TestTargetID = 07C39120184CA0580087293E;
@@ -587,7 +594,9 @@
 				065186EC185B60C10047A360 /* background_image.jpg in Resources */,
 				079D1B55186D299B00C1DAFE /* MobiSageRecommendBundle.bundle in Resources */,
 				0731F543185999CD009A72AC /* SDCoreVC.xib in Resources */,
+				07FEB16218A9D0AB00E7DDFD /* top.png in Resources */,
 				064AE2C31886E4E0009269AE /* 证书1.p12 in Resources */,
+				07FEB16318A9D0AB00E7DDFD /* bottom.png in Resources */,
 				0731F53318599518009A72AC /* SDShowGameVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,8 +694,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -725,8 +734,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -751,7 +760,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Products",
 					"$(inherited)",
@@ -781,7 +790,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Products",
 					"$(inherited)",

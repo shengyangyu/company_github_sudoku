@@ -38,7 +38,7 @@
     [super viewDidLoad];
     
     [self buttonCustomerMethod];
-    
+    /*
     adBanner = [[MobiSageAdBanner alloc] initWithAdSize:Ad_320X50 withDelegate:self];
     adBanner.frame = CGRectMake(0, 0, 320, 50);
     //设置广告轮播动画效果
@@ -57,12 +57,11 @@
     {
         [BPush bindChannel];
     }
-    
+    */
 }
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-
 }
 
 - (void)setChoiceVCLabelString:(NSString *)tltle
@@ -89,6 +88,8 @@
 #pragma mark -按钮 事件
 - (IBAction)classicMethod:(UIButton *)sender
 {
+    self.topImageView.hidden = YES;
+    self.bottomImageView.hidden = YES;
     self.choiceVC.currentModel = GAME_MODE_6;
     [self setChoiceVCLabelString:@"6 阶"];
     [SDCommonMethod panIn:self.choiceVC.view withpParentView:self.view];
@@ -98,6 +99,8 @@
 {
     if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"openInt9model"] integerValue] >= 0)
     {
+        self.topImageView.hidden = YES;
+        self.bottomImageView.hidden = YES;
         self.choiceVC.currentModel = GAME_MODE_9;
         [self setChoiceVCLabelString:@"9 阶"];
         [SDCommonMethod panIn:self.choiceVC.view withpParentView:self.view];
@@ -114,19 +117,22 @@
     [self presentViewController:vc animated:YES completion:^{
         
     }];
-     */
+     
     if (recomendView == nil)
     {
         recomendView = [[MobiSageRecommendView alloc] initWithDelegate:self];
     }
     [self.view addSubview:recomendView];
     [recomendView OpenAdSageRecmdModalView];
+     */
 }
 
 #pragma mark -SDChoiceGameVCDelegate
 - (void)dismissViewMethod
 {
     [SDCommonMethod panOut:self.choiceVC.view withpParentView:self.view];
+    self.topImageView.hidden = NO;
+    self.bottomImageView.hidden = NO;
 }
 
 #pragma mark - MobiSageAdViewDelegate 委托
@@ -228,6 +234,13 @@
     [_buttonMore release];
     [_buttonLast release];
     [_mainView release];
+    [_topImageView release];
+    [_bottomImageView release];
     [super dealloc];
+}
+- (void)viewDidUnload {
+    [self setTopImageView:nil];
+    [self setBottomImageView:nil];
+    [super viewDidUnload];
 }
 @end

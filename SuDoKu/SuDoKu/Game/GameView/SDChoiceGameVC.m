@@ -47,7 +47,7 @@
     [super viewDidLoad];
     [self changeViewButtonSytle];
     self.buttomImage.frame = CGRectMake(self.buttomImage.frame.origin.x, MAINSCREEN_HEIGHT - 50 - STATUS_HEIGHT, self.buttomImage.frame.size.width, self.buttomImage.frame.size.height);
-    
+    /*
     adBanner = [[MobiSageAdBanner alloc] initWithAdSize:Ad_320X50 withDelegate:self];
     adBanner.frame = CGRectMake(0, 0, 320, 50);
     //设置广告轮播动画效果
@@ -61,7 +61,7 @@
     [bottomAdBanner setSwitchAnimeType:Random];
     [self.view addSubview:bottomAdBanner];
     [bottomAdBanner release];
-
+     */
 }
 - (void)changeViewButtonSytle
 {
